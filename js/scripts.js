@@ -44,4 +44,10 @@ $(document).ready(function(){
 		var result = divide(number1, number2);
 		$("#outputDivide").text(result);
 	})
+
+	$("form#colorForm").submit(function(event){
+		event.preventDefault();
+		var favoriteColor = $("#color").val();
+		$("body").css({"background-color":favoriteColor});
+	});
 });
